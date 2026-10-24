@@ -54,3 +54,18 @@ tags:
 未来，这里将记录我的技术心得、踩坑记录，以及那些稍纵即逝的灵感与生活碎碎念。
 
 我的数字世界，正式开张！
+<script src="https://giscus.app/client.js"
+        data-repo="mobellling/blog"
+        data-repo-id="R_kgDOVU1Z4g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOVU1Z4s4DJfbN"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

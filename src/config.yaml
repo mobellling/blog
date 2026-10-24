@@ -11,7 +11,7 @@ metadata:
   title:
     default: MobellSite
     template: '%s — MobellSite'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "这是一个博客网站，由 Mobell 创建。"
   robots:
     index: true
     follow: true
