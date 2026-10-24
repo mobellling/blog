@@ -48,21 +48,12 @@ const structuredData = [
     ...(METADATA?.twitter?.handle ? { sameAs: [`https://x.com/${METADATA.twitter.handle.replace(/^@/, '')}`] } : {}),
   },
 ];
+
 ---
 
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={structuredData} />
-  <head>
-    <title>background</title>
-    <style>
-      body {
-        background-image: url('/assets/images/background.jpg'); /* Replace with your actual background image path */  
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
+  
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -81,7 +72,7 @@ const structuredData = [
   >
     
     <Fragment slot="title">
-      This is a website <span class="hidden xl:inline">modified by Mobell.</span>
+      This is a website modified by Mobell.
     </Fragment>
 
     <Fragment slot="subtitle">
