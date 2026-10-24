@@ -24,7 +24,7 @@ const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const breadcrumbs = [
-  { text: 'Home', href: getPermalink('/') },
+  { text: 'home', href: getPermalink('/') },
   ...(currentPage > 1
     ? [{ text: 'Blog', href: getBlogPermalink() }, { text: `Page ${currentPage}` }]
     : [{ text: 'Blog' }]),
