@@ -8,6 +8,7 @@ import Team from '~/components/widgets/Team.astro';
 import Timeline from '~/components/widgets/Timeline.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+
 const metadata = {
   title: '关于',
   description:
@@ -16,6 +17,31 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={4}
+    items={[
+      {
+        title: 'EE.UU',
+        description: '1234 Lorem Ipsum St, 12345, Miami',
+      },
+      {
+        title: 'Spain',
+        description: '5678 Lorem Ipsum St, 56789, Madrid',
+      },
+      {
+        title: 'Australia',
+        description: '9012 Lorem Ipsum St, 90123, Sydney',
+      },
+      {
+        title: 'Brazil',
+        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+      },
+    ]}
+  />
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -242,31 +268,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
+  
 
   <!-- Features2 Widget ************** -->
 

@@ -1,0 +1,129 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '关于',
+  description:
+    'About page demo built with AstroWind: hero, stats, feature grids and timelines ready to describe your company.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- 使用 AstroWind 统一的背景与容器边距 -->
+   
+  <section class="relative px-4 sm:px-6 py-12 md:py-16 max-w-5xl mx-auto">
+    
+    <!-- 顶部返回导航（对齐主页链接样式） -->
+    <div class="mb-8">
+      <a 
+        href="/" 
+        class="btn-secondary inline-flex items-center gap-1 text-sm py-1.5 px-4 rounded-full transition"
+      >
+        ‹ 返回首页
+      </a>
+    </div>
+
+    <!-- Bento Grid 网格核心区域 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+      
+      <!-- 卡片 1：问候与个人简介（占 2 列） -->
+      <div class="md:col-span-2 intersect-once relative overflow-hidden p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[220px]">
+        <!-- 装饰线圈图标 -->
+        <div class="absolute top-6 right-6 opacity-20 text-muted pointer-events-none">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 3a9 9 0 0 0 0 18" />
+          </svg>
+        </div>
+
+        <div>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-heading mb-3">
+            你好，<br />
+            我是 Mobell<br />
+            <span class="text-primary dark:text-blue-400">来自西电</span>
+          </h1>
+          <p class="text-muted text-sm sm:text-base leading-relaxed mt-4">
+            这个人很懒，什么都没有写。
+          </p>
+        </div>
+      </div>
+
+      <!-- 卡片 2：形象/二次元头像区（占 1 列） -->
+      <div class="intersect-once relative p-6 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-sm flex items-center justify-center min-h-[220px]">
+        <div class="relative w-44 h-44 border border-primary/30 dark:border-blue-400/30 p-2 flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-800/50">
+         
+          <!-- 头像/形象图 -->
+          <img 
+            src="/images/photo.jpg" 
+            alt="个人形象" 
+            class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
+      <!-- 卡片 3：活跃平台社交图标（占 1 列） -->
+      <div class="intersect-once p-6 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[160px]">
+        <div class="flex items-center gap-3 mt-2">
+          <!-- Bilibili / 社交图标 -->
+          <a 
+            href="https://bilibili.com" 
+            target="_blank" 
+            aria-label="Bilibili"
+            class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center text-muted hover:text-primary dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M17.813 4.653h.854c1.51.054 2.769 1.25 2.833 2.761v11.132c-.064 1.51-1.323 2.707-2.833 2.761H5.333C3.823 21.253 2.564 20.056 2 18.546V7.414c.564-1.51 1.823-2.707 3.333-2.761h.854L4.35 2.813a.75.75 0 0 1 1.06-1.06l2.83 2.9h7.52l2.83-2.9a.75.75 0 0 1 1.06 1.06l-1.837 1.84z"/>
+            </svg>
+          </a>
+
+          <!-- GitHub 图标 -->
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            aria-label="GitHub"
+            class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center text-muted hover:text-primary dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 1.64 22 12A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+        </div>
+
+        <span class="text-xs text-muted font-medium mt-4 block">活跃平台</span>
+      </div>
+
+      <!-- 卡片 4：经历（目前）（占 1 列） -->
+      <div class="intersect-once p-6 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[160px]">
+        <h2 class="text-base font-bold text-heading mb-4">专业</h2>
+
+        <div class="space-y-4">
+          <div>
+            <!-- <span class="text-xs text-muted block mb-0.5">2019 - 2023</span> -->
+            <div class="text-sm font-semibold text-heading">网络安全与密码学部 - 密码科学与技术</div>
+            <div class="text-xs text-muted">西安电子科技大学</div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <!-- 卡片 5：找我一起玩？（占 1 列） -->
+      <a 
+        href="mailto:your-email@example.com" 
+        class="intersect-once p-6 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 shadow-sm flex flex-col justify-between group hover:border-primary dark:hover:border-blue-400 transition-all min-h-[160px]"
+      >
+        <h2 class="text-base font-bold text-heading">找我一起玩？</h2>
+
+        <div class="flex items-center justify-between mt-6">
+          <span class="text-sm text-muted font-medium group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">联系我</span>
+          <div class="w-10 h-10 rounded-full border border-gray-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:text-white dark:group-hover:bg-blue-500 transition-all">
+            <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</Layout>
