@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: MobellSite
+  site: 'https://mobellblog.netlify.app'
   base: '/'
   trailingSlash: false
 
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: ch-cn
   textDirection: ltr
 
 apps:

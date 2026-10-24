@@ -28,8 +28,9 @@ const { metadata } = Astro.props;
   }
   {Astro.slots.has('announcement') ? <slot name="announcement" /> : <Announcement />}
   {Astro.slots.has('header') ? <slot name="header" /> : <Header {...headerData} isSticky showRssFeed showToggleTheme />}
-  <main class="flex-1">
+  <main class="flex-1" class="bg-[url('public/background.JPG')] bg-cover bg-center bg-no-repeat py-20">
     <slot />
+    
   </main>
   {Astro.slots.has('footer') ? <slot name="footer" /> : <Footer {...footerData} />}
 </Layout>
