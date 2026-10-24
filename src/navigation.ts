@@ -106,10 +106,10 @@ export const headerData = {
         //   text: 'Category Page',
         //   href: getPermalink('tutorials', 'category'),
         // },
-        {
-          text: '搜索',
-          href: getPermalink('search'),
-        },
+        // {
+        //   text: '搜索',
+        //   href: '/search/',
+        // },
       ],
     },
   ],

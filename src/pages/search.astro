@@ -19,7 +19,7 @@ const metadata = {
     <!-- 3. 初始化 Pagefind UI 脚本 -->
     <script is:inline src="/pagefind/pagefind-ui.js"></script>
     <script is:inline>
-      window.addEventListener('DOMContentLoaded', (event) => {
+      document.addEventListener('astro:page-load', (event) => {
         new PagefindUI({ 
           element: '#search', 
           showSubResults: true,
