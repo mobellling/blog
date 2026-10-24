@@ -1,0 +1,59 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink, getBlogPermalink, getAsset } from '../utils/permalinks';
+import Hero from '~/components/widgets/Hero.astro';
+import StructuredData from '~/components/common/StructuredData.astro';
+import { SITE, METADATA, I18N } from 'astrowind:config';
+import favIconSvg from '~/assets/favicons/favicon.svg';
+const metadata = {
+  title: '投稿',
+  description:
+    '在这里投稿',
+
+};
+const organizationId = `${SITE?.site}/#organization`;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE?.site}/#website`,
+    name: SITE?.name,
+    url: SITE?.site,
+    inLanguage: I18N?.language,
+    publisher: { '@id': organizationId },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': organizationId,
+    name: SITE?.name,
+    url: SITE?.site,
+    logo: new URL(favIconSvg.src, SITE?.site).toString(),
+    ...(METADATA?.twitter?.handle ? { sameAs: [`https://x.com/${METADATA.twitter.handle.replace(/^@/, '')}`] } : {}),
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- 使用 AstroWind 统一的背景与容器边距 -->
+   
+  <section class="relative px-4 sm:px-6 py-12 md:py-16 max-w-5xl mx-auto">
+    
+    <!-- 顶部返回导航（对齐主页链接样式） -->
+    <div class="mb-8">
+      <a 
+        href="/" 
+        class="btn-secondary inline-flex items-center gap-1 text-sm py-1.5 px-4 rounded-full transition"
+      >
+        ‹ 返回首页
+      </a>
+    </div>
+
+
+  <StructuredData slot="head" schema={structuredData} />
+    <Fragment slot="title">
+      投稿功能尚未完毕~
+    </Fragment>
+
+ </section>
+</Layout>

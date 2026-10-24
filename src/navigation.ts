@@ -97,17 +97,17 @@ export const headerData = {
           href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
         },
         // {
-        //   text: 'Article (with MDX)',
-        //   href: getPermalink('markdown-elements-demo-post', 'post'),
+        //   text: '投稿',
+        //   href: /page/friend,
         // },
         // {
         //   text: 'Category Page',
         //   href: getPermalink('tutorials', 'category'),
         // },
-        // {
-        //   text: 'Tag Page',
-        //   href: getPermalink('astro', 'tag'),
-        // },
+        {
+          text: 'Tag Page',
+          href: getPermalink('web', 'tag'),
+        },
       ],
     },
   ],

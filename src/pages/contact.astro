@@ -5,21 +5,21 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: '联系',
   description:
-    'Contact page demo built with AstroWind: a form, contact details and support links in one accessible layout.',
+    '有任何宝贵的意见欢迎联系我向我发聩！',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="联系" title="每一份意见都弥足珍贵" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="给我发消息！"
+    subtitle="直接社交软件私信其实效率更高"
     inputs={[
       {
         type: 'text',
@@ -37,9 +37,9 @@ const metadata = {
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        '通过提交此表单，您同意我根据隐私政策处理您的数据。',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="我看心情回复您！"
   />
 
   <!-- Features2 Widget ************** -->
@@ -47,33 +47,20 @@ const metadata = {
   <Features2
     title="We are here to help!"
     items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
+      
       {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: '电话？不告诉你',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'mobellling@gmail.com',
         icon: 'tabler:mail',
       },
       {
         title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        description: '位置？不告诉你',
         icon: 'tabler:map-pin',
       },
     ]}
