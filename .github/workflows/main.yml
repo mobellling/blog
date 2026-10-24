@@ -29,10 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 安装 pnpm
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
       # 安装 Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -47,12 +43,12 @@ jobs:
 
       # 安装依赖
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install --frozen-lockfile
         working-directory: ${{ env.BUILD_PATH }}
 
       # 构建 Astro
       - name: Build with Astro
-        run: pnpm build
+        run: npm run build
         working-directory: ${{ env.BUILD_PATH }}
 
       # 上传构建产物
