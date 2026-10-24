@@ -1,158 +1,56 @@
 ---
-publishDate: 2026-08-24T00:00:00Z
-author: John Smith
-title: Get started with AstroWind to create a website using Astro and Tailwind CSS
-excerpt: Build a site with the free AstroWind template for Astro and Tailwind CSS. Create the project, edit the home page, publish a post and deploy it.
+publishDate: 2026-10-24T12:55:00Z
+author: Mobell
+title: 网站建成的第一天
+excerpt: 花费了一点时间建成了这个网站，本意是记录一下我在虚拟代码世界的心路历程，但是建立网站也太难了，从头学习前端开发，太复杂了。前前后后两天的时间，也就弄成这个样了，凑活着用吧……
 image: https://images.unsplash.com/photo-1502101872923-d48509bff386?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 imageAlt: Two toddlers standing at the bottom of a beige concrete staircase
 category: Tutorials
 tags:
   - astro
-  - tailwind css
+  - web
+  - 网站
+  - 第一天
 ---
+## 前言
+在这个信息爆炸、算法推荐将我们包裹在各类短视频和社交平台流里的时代，我常常感到一种莫名的精神消耗。所有的内容都在追求“快”和“爽”，却很少有属于自己的一方净土。
 
-AstroWind is a free, open-source template for [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/). It gives you a complete marketing site with a blog, dark mode, optimized images and SEO metadata, built from typed components you compose in pages. This guide takes you from an empty folder to a deployed site, step by step. If you would rather not do the steps yourself, the template is prepared for AI coding assistants: [hand the work to Claude Code, Cursor or a similar tool](/build-websites-with-ai) and come back here when you want to know what it did.
+在大佬陈同学的启发下，我萌生了一个质朴的想法：我想要一个完全属于自己的、由我做主的网站。
 
-**What you'll build**
+## 开端
+为什么想要一个属于自己的网站？
+很大一部分原因，是由于看到陈同学在弄这玩意（不知道为什么），自己也想做一下，可无奈技术力不够，一边翻阅教程，一边求助ai，实在不行，就请教陈大佬。
 
-- A working copy of the template running locally, with your name, colors and menus.
-- A home page composed from the template's widgets.
-- Your first blog post, listed, tagged and included in the RSS feed.
-- A static build deployed to Vercel, Netlify or any host that serves files.
+于是，从零开始的“折腾”之旅开始了……
 
-## What you need to run Astro
+## 阻碍
+作为一个非根正苗红的前端大神，刚决定动手时，内心其实是有些打鼓的。从选择用什么框架，到面对陌生的命令行，过程并不总是一帆风顺。
 
-- **Node.js 22.** The `engines` field in `package.json` states the exact minimum; `.nvmrc` pins the major version, so `nvm use` gives you a compatible release.
-- A terminal and an editor. Visual Studio Code with the Astro extension gives you highlighting and completion inside `.astro` files.
-- A GitHub account if you want the one-click deploys at the end.
+<div align="center">
+  <img src="/images/warn.png" alt="报错" width="70%" />
+</div>
 
-## Create your Astro + Tailwind project
+工具：打开 VS Code，面对黑漆漆的终端，看着偶尔蹦出来的英文报错（比如让人头疼的网络连接超时、配置代理、Git 权限冲突）和全英文的工具网站，我抓耳挠腮，抱怨不止。但是最后还是选择一步一步坚持下来，自己不会的地方问ai，问大佬，对着成千上百行的代码“全局搜索”，一点一点排查warn原因。终于，网站正常运行了。
 
-The Astro CLI scaffolds a project from any GitHub repository:
+细节：然而，网站搭好之后，最让人上头的环节开始了——魔改（DIY）。虽然只是改改网站图标、调整导航栏的布局、把自己的 Logo 和名字放在左上角，为了让图标和文字乖乖排在同一行，反复调整 CSS 弹性盒和对齐属性，但却花费了我不少的时间，因为我对这些前端代码完全不敏感，不知道在什么地方调整想要的东西。在帮助文档和ai的帮助下，一个简单的小网页还是出来了。
 
-```shell
-npm create astro@latest -- --template arthelokyo/astrowind
-```
+远航：这只是一个开始，当把代码推送到 GitHub，通过 Netlify 一键部署，发现我辛辛苦苦修改的代码完全无法运行，我的心态是崩溃的。
 
-Answer the prompts (project folder, install dependencies, initialize git), then:
+<div align="center">
+  <img src="/images/pagenotfound.png" alt="找不到页面" width="100%" />
+</div>
 
-```shell
-cd my-site
-npm run dev
-```
+由于网站是全英文的，没有任何中文翻译，我很难找到究竟应该修改哪里。在本地能正常运行，放在托管网站上却无法显示，这显然是网站配置没有调节好。
 
-Open `http://localhost:4321`. You are looking at the demo site: a home page, several alternative home pages, a set of landing pages, a demo blog and the usual about, services, pricing, contact and legal pages. Everything you see is a file you can edit, and the dev server reloads on save.
+感谢大模型！感谢陈大佬！在我多次尝试未果后，我果断请求陈同学的帮助。很幸运，摸索过后，我们发现，astro的默认输出目录是dist，而Netlify并不知道这一点，需要手动输入。与英文界面斗智斗勇近半个小时后，我们终于解决了问题！
 
-## Where things live in the AstroWind template
+<div align="center">
+  <img src="/images/dist.png" alt="dist" width="100%" />
+</div>
 
-You will spend nearly all your time in `src/`:
+## 结语
+我明白自己掌握的知识只是冰山一角，这个网站还有许多我不知道的功能和页面，我只是实现了它最基础的功能。但拥有一个独立网站，最大的意义不是它有多么绚丽，而在于它由自己亲手编写。在这个瞬息万变的互联网上，我们拥有了一个永远不会关门、随时欢迎我回来驻足的虚拟空间。
 
-| Path                                | What is there                                                                          |
-| ----------------------------------- | -------------------------------------------------------------------------------------- |
-| `src/pages/`                        | One file per route. `index.astro` is the home page.                                    |
-| `src/components/widgets/`           | The page sections: heroes, features, pricing, FAQ, testimonials…                       |
-| `src/data/post/`                    | Blog posts as Markdown or MDX files.                                                   |
-| `src/config.yaml`                   | Site name, URL, default SEO metadata, blog settings, analytics, theme.                 |
-| `src/navigation.ts`                 | The header menu, the header button and the footer columns.                             |
-| `src/components/CustomStyles.astro` | Colors and fonts as CSS variables, for light and dark mode.                            |
-| `src/assets/images/`                | Images that Astro optimizes at build time.                                             |
-| `public/`                           | Files copied as they are: `robots.txt`, headers, anything a host wants at a fixed URL. |
+未来，这里将记录我的技术心得、踩坑记录，以及那些稍纵即逝的灵感与生活碎碎念。
 
-The template's own machinery lives in `vendor/integration/`. You do not need to touch it.
-
-## The three files to edit first
-
-**`src/config.yaml`.** Change `site.name` and `site.site` (your final URL, needed for the sitemap, RSS and Open Graph tags), then the default `metadata.title` and `metadata.description`. The `apps.blog` block controls the blog: set `isEnabled: false` if you do not want one, or change `postsPerPage` and the `permalink` pattern.
-
-**`src/navigation.ts`.** Replace the demo menus with your pages. Each entry is `{ text, href }`; use `getPermalink('/about')` for internal links so the base path is respected if you ever deploy under a sub-folder.
-
-**`src/components/CustomStyles.astro`.** Your brand colors: `--aw-color-primary`, `--aw-color-secondary` and `--aw-color-accent`, plus the text and background colors, once for light and once for dark. Everything in the template reads these variables. Fonts are declared in `astro.config.ts` (the `fonts` entry, served by Astro's Fonts API) and mapped to the `--aw-font-*` variables in `CustomStyles.astro`. The [customization guide](/how-to-customize-astrowind-to-your-brand) covers all of this in depth.
-
-## Edit the home page
-
-Open `src/pages/index.astro`. A page is a layout plus a stack of widgets, each configured with props:
-
-```astro
----
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-const metadata = {
-  title: 'Acme: invoices without the spreadsheet',
-  description: 'Send, track and reconcile invoices in one place.',
-};
----
-
-<Layout metadata={metadata}>
-  <Hero
-    tagline="Invoicing"
-    title="Invoices without the spreadsheet"
-    subtitle="Send, track and reconcile in one place."
-    actions={[{ variant: 'primary', text: 'Start free', href: '#pricing' }]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Product screenshot' }}
-  />
-
-  <Features
-    id="features"
-    title="What you get"
-    items={[
-      { title: 'Recurring invoices', description: 'Set it once.', icon: 'tabler:repeat' },
-      { title: 'Payment links', description: 'Card or bank transfer.', icon: 'tabler:credit-card' },
-    ]}
-  />
-
-  <CallToAction title="Ready?" actions={[{ variant: 'primary', text: 'Start free', href: '/signup' }]} />
-</Layout>
-```
-
-Most section widgets share the same base props: `title`, `subtitle`, `tagline`, an `id` for anchors and a `bg` slot for a custom background. Icons come from the [Tabler](https://tabler.io/icons) set through `astro-icon`. A catalog of the section widgets, their main props and the demo page where each is used is in `.agents/skills/use-widgets.md`; the landing pages under `src/pages/landing/` show them combined into complete pages, and the [landing page guide](/landing) explains the thinking behind them.
-
-## Publish your first post
-
-Create `src/data/post/hello-world.md`:
-
-```markdown
----
-publishDate: 2026-08-24T00:00:00Z
-title: Hello, world
-excerpt: The first post on the new site.
-image: ~/assets/images/hello.jpg
-imageAlt: The team at the launch party
-category: News
-tags:
-  - company
-author: Your name
----
-
-Write in Markdown. Headings, lists, tables, code blocks and images all work;
-use the `.mdx` extension to embed components.
-```
-
-The post appears at `/hello-world` (the `permalink` setting in `config.yaml` decides the pattern), in the blog list, in its category and tag pages, in the RSS feed and in the sitemap, with its Open Graph tags and structured data generated for you. `draft: true` keeps a post out of the build while you work on it; `updateDate` marks a revision, shown under the title and sent to search engines. The [Markdown demo post](/markdown-elements-demo-post) shows how every element renders.
-
-## Check and build
-
-```shell
-npm run check   # astro check, ESLint and Prettier
-npm run build   # static site in dist/
-npm run preview # serve dist/ locally
-```
-
-The build is fully static: `dist/` is a folder of HTML, CSS, JavaScript and optimized images that any web server can host.
-
-## Deploy your Astro site (Vercel, Netlify, Cloudflare)
-
-- **Vercel or Netlify:** connect the repository; both detect Astro and use `npm run build` with `dist/` as the output. The README has one-click buttons for these and other hosts.
-- **Cloudflare Pages, GitHub Pages, any static host:** upload `dist/`. The `deploy-cloudflare` and `deploy-with-base-path` skills in `.agents/skills/` cover the two cases that need a setting.
-- **Your own server:** the repository includes a `Dockerfile` that serves `dist/` with nginx.
-
-After the first deploy, set `site.site` in `config.yaml` to the real URL if you have not already, so canonical links, the sitemap and social previews point to the right place.
-
-## Next steps
-
-- [Customize the template to your brand](/how-to-customize-astrowind-to-your-brand): colors, fonts, logo, favicons.
-- [How the template works under the hood](/astrowind-template-in-depth): the integration, permalinks, images and metadata.
-- [Build a landing page that converts](/landing): the guide behind the six landing page examples.
-- Working with an AI coding assistant? The repository ships an `AGENTS.md` and step-by-step skills in `.agents/skills/` so the assistant follows the template's conventions. [Here is how to get the most out of it](/build-websites-with-ai).
+我的数字世界，正式开张！
