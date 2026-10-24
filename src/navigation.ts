@@ -1,7 +1,9 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
+
   links: [
+    
     // {
     //   text: 'Homes',
     //   links: [
@@ -105,8 +107,8 @@ export const headerData = {
         //   href: getPermalink('tutorials', 'category'),
         // },
         {
-          text: 'Tag Page',
-          href: getPermalink('web', 'tag'),
+          text: '搜索',
+          href: getPermalink('search'),
         },
       ],
     },
