@@ -62,10 +62,18 @@ const structuredData = [
       {
         variant: 'primary',
         text: '关于',
-        href: getPermalink('/aboutme'), // Replace with your actual bilibili URL
-        
+        href: getPermalink('/aboutme'), 
       },
-      { text: 'bilibili主页', href: 'https://space.bilibili.com/1917373256' },
+      {
+        
+        text: '博客',
+        href: getBlogPermalink(), 
+      },
+      { 
+       variant: 'tertiary',
+       text: 'bilibili主页',
+       href: 'https://space.bilibili.com/1917373256'
+       },
     ]}
     
   >
@@ -76,7 +84,7 @@ const structuredData = [
 
     <Fragment slot="subtitle">
       
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">功能仍在改进中~.</span>
       你可以在这里找到blog，之后或许我会添加一点新内容？
     </Fragment>
   </Hero>
