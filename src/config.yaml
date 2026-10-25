@@ -1,6 +1,6 @@
 site:
   name: MobellSite
-  site: 'https://mobellblog.netlify.app'
+  site: 'https://mobellling.github.io'
   base: '/'
   trailingSlash: true
 

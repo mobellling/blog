@@ -64,7 +64,7 @@ tags:
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="Gruvbox"
+        data-theme="cobalt"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
