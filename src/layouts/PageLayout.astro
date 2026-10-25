@@ -16,6 +16,7 @@ const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
+  
   <slot name="head" slot="head" />
   {
     /*
@@ -40,6 +41,8 @@ const { metadata } = Astro.props;
   </main>
   {Astro.slots.has('footer') ? <slot name="footer" /> : <Footer {...footerData} />}
 </Layout>
+<!-- 引入不蒜子统计异步脚本 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3.0/busuanzi.pure.mini.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toast = document.getElementById('toast');

@@ -28,6 +28,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  
   <div
     class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
   >
@@ -36,6 +37,9 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         <div class="mb-2">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
+
+         
+        
         <div class="text-sm text-muted flex gap-1">
           {
             secondaryLinks.map(({ text, href }, index) => (
@@ -51,6 +55,9 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           }
         </div>
       </div>
+
+
+      
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
@@ -95,10 +102,24 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           ''
         )
       }
+<!-- 访客统计显示区域 -->
+<div class="text-sm text-gray-500 dark:text-slate-400 flex flex-wrap justify-center items-center gap-4 mt-4">
+  <!-- 本站总访问量 -->
+  <span id="busuanzi_container_site_pv">
+    本站总访问量 <span id="busuanzi_value_site_pv" class="font-semibold text-gray-700 dark:text-slate-200">--</span> 次
+  </span>
 
+  <span class="text-gray-300 dark:text-slate-700">|</span>
+
+  <!-- 本站总访客数 -->
+  <span id="busuanzi_container_site_uv">
+    本站总访客数 <span id="busuanzi_value_site_uv" class="font-semibold text-gray-700 dark:text-slate-200">--</span> 人
+  </span>
+</div>
       <div class="text-sm mr-4 dark:text-muted">
         <Fragment set:html={footNote} />
       </div>
     </div>
   </div>
+
 </footer>
