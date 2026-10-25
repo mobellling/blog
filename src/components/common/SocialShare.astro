@@ -77,20 +77,33 @@ const { text, url, class: className = 'inline-block' } = Astro.props;
     />
   </button>
   <!-- QQ 分享按钮 -->
-  <button
-    type="button"
-    class="ml-2 rtl:ml-0 rtl:mr-2"
-    title="QQ Share"
-    aria-label="QQ Share"
-    data-aw-social-share="qq"
-    data-aw-url={url}
-    data-aw-text={text}
-  >
-    <Icon
-      name="local:qq"
-      class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-black dark:hover:text-slate-300"
-    />
-  </button>
+<button
+  type="button"
+  class="ml-2 rtl:ml-0 rtl:mr-2 cursor-pointer share-button"
+  title="复制链接并分享到 QQ"
+  aria-label="复制链接并分享到 QQ"
+  data-url={url}
+  data-text={text}
+>
+  <Icon
+    name="local:qq"
+    class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400 transition duration-150"
+  />
+</button>
+
+<button
+  type="button"
+  class="ml-2 rtl:ml-0 rtl:mr-2 cursor-pointer share-button"
+  title="复制链接并分享到微信"
+  aria-label="复制链接并分享到微信"
+  data-url={url}
+  data-text={text}
+>
+  <Icon
+    name="local:wechat"
+    class="w-6 h-6 text-gray-400 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-400 transition duration-150"
+  />
+</button>
 </aw-social-share>
 
 <script>
@@ -100,7 +113,7 @@ const { text, url, class: className = 'inline-block' } = Astro.props;
     linkedin: (url, text) => `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`,
     whatsapp: (_url, text) => `https://wa.me/?text=${text}%20${_url}`,
     mail: (url, text) => `mailto:?subject=%22${text}%22&body=${text}%20${url}`,
-    qq: (url, text) => `https://connect.qq.com/widget/shareqq/index.html?url=${url}&title=${text}`,
+    
   };
 
   class AwSocialShare extends HTMLElement {
@@ -133,3 +146,4 @@ const { text, url, class: className = 'inline-block' } = Astro.props;
     display: inline-block;
   }
 </style>
+
