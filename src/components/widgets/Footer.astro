@@ -103,19 +103,8 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 <!-- 访客统计显示区域 -->
-<div class="text-sm text-gray-500 dark:text-slate-400 flex flex-wrap justify-center items-center gap-4 mt-4">
-  <!-- 本站总访问量 -->
-  <span id="busuanzi_container_site_pv">
-    本站总访问量 <span id="busuanzi_value_site_pv" class="font-semibold text-gray-700 dark:text-slate-200">--</span> 次
-  </span>
-
-  <span class="text-gray-300 dark:text-slate-700">|</span>
-
-  <!-- 本站总访客数 -->
-  <span id="busuanzi_container_site_uv">
-    本站总访客数 <span id="busuanzi_value_site_uv" class="font-semibold text-gray-700 dark:text-slate-200">--</span> 人
-  </span>
-</div>
+<p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
+<p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
       <div class="text-sm mr-4 dark:text-muted">
         <Fragment set:html={footNote} />
       </div>

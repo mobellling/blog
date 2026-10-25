@@ -41,8 +41,11 @@ const { metadata } = Astro.props;
   </main>
   {Astro.slots.has('footer') ? <slot name="footer" /> : <Footer {...footerData} />}
 </Layout>
-<!-- 引入不蒜子统计异步脚本 -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3.0/busuanzi.pure.mini.js"></script>
+
+<!-- 引入统计异步脚本 -->
+<script async src="//githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js"></script>
+
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toast = document.getElementById('toast');
