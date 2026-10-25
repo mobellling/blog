@@ -148,7 +148,9 @@ export const footerData = {
     {
       title: '特别鸣谢',
       links: [
-        { text: 'neonmz', href: 'https://neonmz.github.io/' },
+        { text: 'neonmz', href: 'https://neonmz.github.io/' ,
+          target: '_blank'
+        },
        
         // { text: 'Report an issue', href: 'https://github.com/arthelokyo/astrowind/issues' },
         // { text: 'License', href: 'https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md' },
