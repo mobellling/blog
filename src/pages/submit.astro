@@ -1,59 +1,72 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { getPermalink, getBlogPermalink, getAsset } from '../utils/permalinks';
-import Hero from '~/components/widgets/Hero.astro';
-import StructuredData from '~/components/common/StructuredData.astro';
-import { SITE, METADATA, I18N } from 'astrowind:config';
-import favIconSvg from '~/assets/favicons/favicon.svg';
-const metadata = {
-  title: '投稿',
-  description:
-    '在这里投稿',
 
+const metadata = {
+  title: '用户投稿',
 };
-const organizationId = `${SITE?.site}/#organization`;
-const structuredData = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': `${SITE?.site}/#website`,
-    name: SITE?.name,
-    url: SITE?.site,
-    inLanguage: I18N?.language,
-    publisher: { '@id': organizationId },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': organizationId,
-    name: SITE?.name,
-    url: SITE?.site,
-    logo: new URL(favIconSvg.src, SITE?.site).toString(),
-    ...(METADATA?.twitter?.handle ? { sameAs: [`https://x.com/${METADATA.twitter.handle.replace(/^@/, '')}`] } : {}),
-  },
-];
 ---
 
 <Layout metadata={metadata}>
-  <!-- 使用 AstroWind 统一的背景与容器边距 -->
-   
-  <section class="relative px-4 sm:px-6 py-12 md:py-16 max-w-5xl mx-auto">
-    
-    <!-- 顶部返回导航（对齐主页链接样式） -->
-    <div class="mb-8">
-      <a 
-        href="/" 
-        class="btn-secondary inline-flex items-center gap-1 text-sm py-1.5 px-4 rounded-full transition"
+  <section class="px-6 py-12 max-w-xl mx-auto min-h-[60vh]">
+    <h1 class="text-3xl font-bold mb-2 text-center text-heading">请输入您的信息</h1>
+    <p class="text-center text-gray-500 mb-8">按照格式发送邮件，期待您的投稿！</p>
+
+    <!-- 表单提交给 Web3Forms -->
+    <form 
+      action="https://api.web3forms.com/submit" 
+      method="POST" 
+      class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border border-slate-100 dark:border-slate-800"
+    >
+      
+      <!-- 1. 填入你在 Web3Forms 官网免费申请并收到的 Access Key -->
+      <input type="hidden" name="access_key" value="3a80c5c2-0581-4190-85c0-a1bbfc7b3d4a" />
+
+      <!-- 2. 名字输入框 -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="您的名字或昵称" 
+        />
+      </div>
+
+      <!-- 3. 邮箱输入框（方便你收到邮件后直接点击回复） -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Title</label>
+        <input 
+          type="text" 
+          name="title" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="标题" 
+        />
+      </div>
+
+      <!-- 4. 投稿内容文本域 -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Message</label>
+        <textarea 
+          name="message" 
+          rows="5" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="写下你的投稿内容或想说的话...不应少于500字！"
+        ></textarea>
+      </div>
+
+      <!-- 5. 蓝色的提交按钮 -->
+      <button 
+        type="submit" 
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition duration-200 shadow-lg shadow-blue-500/25"
       >
-        ‹ 返回首页
-      </a>
-    </div>
-
-
-  <StructuredData slot="head" schema={structuredData} />
-    <Fragment slot="title">
-      投稿功能尚未完毕~
-    </Fragment>
-
- </section>
+        提交
+      </button>
+      
+      <p class="text-center text-xs text-gray-400">审核后发布！请勿重复提交！！</p>
+      <p class="text-center text-xs text-gray-400">看到success即为提交成功！请勿重复提交！！</p>
+    </form>
+  </section>
 </Layout>
