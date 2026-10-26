@@ -4,27 +4,57 @@ export const headerData = {
 
   links: [
     
-    // {
-    //   text: 'Homes',
-    //   links: [
-    //     {
-    //       text: 'SaaS',
-    //       href: getPermalink('/homes/saas'),
-    //     },
-    //     {
-    //       text: 'Startup',
-    //       href: getPermalink('/homes/startup'),
-    //     },
-    //     {
-    //       text: 'Mobile App',
-    //       href: getPermalink('/homes/mobile-app'),
-    //     },
-    //     {
-    //       text: 'Personal',
-    //       href: getPermalink('/homes/personal'),
-    //     },
-    //   ],
-    // },
+    {
+      text: '主页',
+      href: '/', // 指向你的首页
+    },    
+       {
+      text: '博客',
+      links: [
+        {
+          text: '博客列表',
+          href: getBlogPermalink(),
+        },
+        // {
+        //   text: '文章',
+        //   href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        // },
+        // {
+        //   text: '投稿',
+        //   href: /page/friend,
+        // },
+        // {
+        //   text: 'Category Page',
+        //   href: getPermalink('tutorials', 'category'),
+        // },
+        {
+          text: '搜索',
+          href: '/search/',
+        },
+      ],
+    },
+
+    {
+      text: '其他',
+      links: [
+        // {
+        //   text: 'SaaS',
+        //   href: getPermalink('/homes/saas'),
+        // },
+        // {
+        //   text: 'Startup',
+        //   href: getPermalink('/homes/startup'),
+        // },
+        {
+          text: '友链',
+          href: getPermalink('/homes/friends'),
+        },
+        // {
+        //   text: 'Personal',
+        //   href: getPermalink('/homes/personal'),
+        // },
+      ],
+    },
     // {
     //   text: 'Pages',
     //   links: [
@@ -87,31 +117,7 @@ export const headerData = {
     //     },
     //   ],
     // },
-    {
-      text: 'Blog',
-      links: [
-        {
-          text: '博客列表',
-          href: getBlogPermalink(),
-        },
-        {
-          text: '文章',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        // {
-        //   text: '投稿',
-        //   href: /page/friend,
-        // },
-        // {
-        //   text: 'Category Page',
-        //   href: getPermalink('tutorials', 'category'),
-        // },
-        {
-          text: '搜索',
-          href: '/search/',
-        },
-      ],
-    },
+ 
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
 };

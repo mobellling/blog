@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '友链',
+  description: '朋友们的博客和推荐站点',
+};
+
+// 友链数据列表：你可以在这里自由增减你的朋友
+const friends = [
+  {
+    name: 'Neon',
+    description: 'Bonjour!',
+    url: 'https://neonmz.github.io/', // 替换为对方的博客链接
+    avatar: 'https://neonmz.github.io/avatar.jpg', // 替换为对方的头像图片链接
+  },
+  // {
+  //   name: '示例友人 B',
+  //   description: '记录技术、生活与有趣的点滴。',
+  //   url: 'https://example.com',
+  //   avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop',
+  // },
+  // 可以在这里继续添加更多友链...
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 py-12 max-w-5xl mx-auto min-h-[70vh]">
+    
+    <!-- 顶部标题横幅区（呼应截图样式） -->
+    <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-gray-100 dark:border-slate-700/80 rounded-3xl p-8 mb-10 shadow-sm">
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+        友链
+      </h1>
+      <p class="text-gray-600 dark:text-gray-300 text-base">
+        朋友们的博客和推荐站点
+      </p>
+    </div>
+
+    <!-- 友链卡片网格列表（3列排布） -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {
+        friends.map((friend) => (
+          <a 
+            href={friend.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group flex items-center gap-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-gray-100 dark:border-slate-700/80 rounded-3xl p-5 shadow-sm hover:shadow-md hover:border-blue-500/50 dark:hover:border-blue-400/50 transition-all duration-300"
+          >
+            <!-- 头像 -->
+            <img 
+              src={friend.avatar} 
+              alt={friend.name} 
+              class="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-gray-100 dark:border-slate-700 group-hover:scale-105 transition-transform"
+            />
+
+            <!-- 文本信息 -->
+            <div class="flex flex-col overflow-hidden">
+              <h2 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                {friend.name}
+              </h2>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2 leading-relaxed">
+                {friend.description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- 底部友链添加说明（可选） -->
+    <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
+      <p>欢迎联系！</p>
+    </div>
+
+  </section>
+</Layout>
