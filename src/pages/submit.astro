@@ -1,18 +1,24 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
+import Icon from 'node_modules/astro-icon/components/Icon.astro';
 const metadata = {
   title: '用户投稿',
 };
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 py-12 max-w-xl mx-auto min-h-[60vh]">
+  <section class="px-6 py-12 max-w-7xl mx-auto min-h-[60vh]">
+    <div class="text-center mb-8">
     <h1 class="text-3xl font-bold mb-2 text-center text-heading">请输入您的信息</h1>
     <p class="text-center text-gray-500 mb-8">按照格式发送邮件，期待您的投稿！</p>
+    </div>
 
+    <!-- 🟢 核心：左右两栏网格布局 (大屏分两列，手机端单列) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 
-    
+      <!-- 左侧：投稿表单 (占 2 列) -->
+      <div class="lg:col-span-2 bg-white dark:bg-slate-800 shadow-xl rounded-2xl p-6 sm:p-8 border border-gray-100 dark:border-slate-700">
+
 <form id="contribForm"
 action="https://api.staticforms.dev/submit" method="POST"  
 class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border border-slate-100 dark:border-slate-800"
@@ -20,8 +26,6 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
 >
   <input type="hidden" name="apiKey" value="sf_3b8017ebc677397163a9afd2">
 <div>
-
-
   <!-- your own inputs -->
 <label class="block text-sm font-medium mb-2 text-heading">Name</label>
         <input 
@@ -101,14 +105,96 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
       >
         提交
       </button>
-      <!-- 成功后的提示弹窗（可以默认隐藏） -->
-<div id="successMsg" class="hidden fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
-   投稿成功！感谢您的分享，我会尽快审核。
-</div>
+     
+
       <p class="text-center text-xs text-gray-400">审核后发布！请勿重复提交！！</p>
       <p class="text-center text-xs text-gray-400">看到successful即为提交成功！请勿重复提交！！</p>
 
 </form>
+</div>
+
+<!-- 右侧：常驻 Markdown 格式与图床教程文档 (占 1 列) -->
+      <div class="lg:col-span-1 bg-blue-50/60 dark:bg-slate-800/60 border border-blue-100 dark:border-slate-700 rounded-2xl p-6 shadow-sm sticky top-6">
+        <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
+          <Icon name="tabler:file-text" class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          <span>投稿编写指南</span>
+        </h3>
+
+        <div class="space-y-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+          <div>
+            <strong class="text-gray-900 dark:text-white block mb-1">1. 标题语法：</strong>
+            <p class="mb-1">使用 <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-pink-600">#</code> 代表大标题，<code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-pink-600">##</code> 代表二级标题。<code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-pink-600">###</code> 代表三级标题。</p>
+          </div>
+
+          <div>
+            <strong class="text-gray-900 dark:text-white block mb-1">2. 正文语法：</strong>
+              
+              <p class="mb-1">使用 <a   class="text-black-600"><b>** **</b></a> 表示<b>**粗体文字**</b></p>
+              <p class="mb-1">使用 <a   class="text-black-600"><i>* *</i></a> 表示<i>*斜体文字*</i></p>
+              <p class="mb-1">使用 <a   class="text-black-600"><b>~~ ~~</b></a> 表示<s>~~删除线~~</s></p>
+              <p class="mb-1">使用 <a   class="text-black-600"><b>&gt</b></a> 表示 |引用文字</p>
+          </div>
+         
+          <div>
+            <strong class="text-gray-900 dark:text-white block mb-1">3. 引用与代码：</strong>
+            <p class="mb-1">引用段落 ，文字、代码块使用三个反引号（键盘左上角）包裹。</p>
+            <p>```</p>
+            <p>文字</p>
+            <p>```</p>
+            <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-black-600"> 文字</code>
+          </div>
+
+          <div>
+            <strong class="text-gray-900 dark:text-white block mb-1">4. 超链接：</strong>
+            <p>使用[]将文本放入,后面紧跟英文状态的(),内写链接</p>
+            <p>[晓钟](mobellling.github.io)</p>
+            <p><a href="https://mobellling.github.io/" target="_blank" class="text-blue-600 underline">晓钟</a></p>
+          </div>
+          <div>
+          <strong class="text-gray-900 dark:text-white block mb-1">5. 换行：</strong>
+              <p>如果要在 .md 文件中编写，直接回车换行将不会输出换行，与上一行连在一起，不带换行符。若要在 .md 文件中创建换行符，需要包含以下项之一：</p>
+              <p> - 第一行末尾包含两个空格。</p>
+              <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-black-600">
+                This example  <br/>
+                Will span two lines
+              </code>
+
+              <p> - 第一行末尾为反斜杠\。</p>
+              <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-black-600">
+                This example\<br/>
+                Will span two lines
+              </code>
+
+
+              <p> - 第一行末尾包&ltbr/&gt。</p>
+              <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-black-600">
+                This example&ltbr/&gt<br/>
+                Will span two lines
+              </code>
+
+              <p> - 如果在两行之间留空行，则 .md 文件和 Markdown 在问题、拉取请求和讨论中都会呈现由空白行分隔的两行：</p>
+              <code class="bg-white dark:bg-slate-900 px-1 py-0.5 rounded text-black-600">
+                This example&ltbr<br/><br/>
+                Will span two lines
+              </code>
+          </div>
+
+          
+          <div>
+            <strong class="text-gray-900 dark:text-white block mb-1">6. 映像：</strong>
+            <p>可以通过添加 ！ 并将替换文字包装在 [ ]. 替代文字是图像中信息的短文本等效项。 然后，将图像的链接包装在括号 ()中。</p>
+            <p>！[晓钟](https://yourwebsite.com/photo.jpg)</p>
+            <img width="100" src="/images/photo.jpg" alt="晓钟">
+          </div>
+
+          <div class="pt-3 border-t border-blue-100 dark:border-slate-700 text-xs text-gray-500">
+            更多内容，请查阅<p><a href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github" target="_blank" class="text-blue-600 underline">GitHub文档</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 <script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -118,3 +204,14 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
     
   </section>
 </Layout>
+
+
+
+
+
+      
+     
+      
+      
+
+ 
