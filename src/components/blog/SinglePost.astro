@@ -117,3 +117,54 @@ const { post, url } = Astro.props;
     
   </article>
 </section>
+
+<script>
+  // 监听 QQ 按钮的点击事件
+  const qqBtn = document.getElementById('share-btn');
+
+  if (qqBtn) {
+    qqBtn.addEventListener('click', async () => {
+      // 1. 获取按钮上的网址和标题文字
+      const shareUrl = qqBtn.getAttribute('data-url') || window.location.href;
+      const shareText = qqBtn.getAttribute('data-text') || document.title;
+
+      // 2. 拼接要复制的完整文本内容
+      const copyContent = `${shareText}\n链接：${shareUrl}`;
+
+      try {
+        // 3. 调用 Web API 写入剪贴板
+        await navigator.clipboard.writeText(copyContent);
+        
+        // 4. 复制成功后的提示反馈（可根据需求自定义提示效果）
+        alert('链接及内容已复制到剪贴板，快去粘贴分享吧！');
+      } catch (err) {
+        console.error('复制失败:', err);
+        
+        // 降级兼容处理（防止部分老旧浏览器或非 HTTPS 环境不支持 clipboard API）
+        fallbackCopyTextToClipboard(copyContent);
+      }
+    });
+  }
+
+  // 备用降级复制方案
+  function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed'; // 避免页面滚动
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        alert('链接及内容已复制到剪贴板！');
+      } else {
+        alert('复制失败，请手动复制');
+      }
+    } catch (err) {
+      alert('复制失败，请手动复制');
+    }
+    document.body.removeChild(textArea);
+  }
+</script>
