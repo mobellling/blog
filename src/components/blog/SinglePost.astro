@@ -118,53 +118,44 @@ const { post, url } = Astro.props;
   </article>
 </section>
 
-<script>
-  // 监听 QQ 按钮的点击事件
-  const qqBtn = document.getElementById('share-btn');
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    let toastTimer = null;
 
-  if (qqBtn) {
-    qqBtn.addEventListener('click', async () => {
-      // 1. 获取按钮上的网址和标题文字
-      const shareUrl = qqBtn.getAttribute('data-url') || window.location.href;
-      const shareText = qqBtn.getAttribute('data-text') || document.title;
+    function showToast(message) {
+      if (!toast) return;
+      if (toastTimer) clearTimeout(toastTimer);
 
-      // 2. 拼接要复制的完整文本内容
+      toastText.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 2000);
+    }
+
+    // 全局事件委托：监听所有带有 data-aw-social-share="qq" 的点击
+    Array.from(document.getElementsByClassName('share-button')).forEach((btn) => {
+      btn.addEventListener('click', async (e) => {
+        const qqBtn = document.getElementsByClassName('share-button')[0];
+        if (!qqBtn) return;
+
+      const shareUrl = qqBtn.getAttribute('data-aw-url') || window.location.href;
+      const shareText = qqBtn.getAttribute('data-aw-text') || document.title;
       const copyContent = `${shareText}\n链接：${shareUrl}`;
 
       try {
-        // 3. 调用 Web API 写入剪贴板
         await navigator.clipboard.writeText(copyContent);
-        
-        // 4. 复制成功后的提示反馈（可根据需求自定义提示效果）
-        alert('链接及内容已复制到剪贴板，快去粘贴分享吧！');
+        showToast('已复制到剪贴板，快去粘贴分享吧！');
       } catch (err) {
         console.error('复制失败:', err);
-        
-        // 降级兼容处理（防止部分老旧浏览器或非 HTTPS 环境不支持 clipboard API）
-        fallbackCopyTextToClipboard(copyContent);
+        showToast('复制失败，请手动复制链接');
       }
     });
-  }
-
-  // 备用降级复制方案
-  function fallbackCopyTextToClipboard(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed'; // 避免页面滚动
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-      const successful = document.execCommand('copy');
-      if (successful) {
-        alert('链接及内容已复制到剪贴板！');
-      } else {
-        alert('复制失败，请手动复制');
-      }
-    } catch (err) {
-      alert('复制失败，请手动复制');
-    }
-    document.body.removeChild(textArea);
-  }
-</script>
+  });
+});
+</script> -->
