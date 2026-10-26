@@ -1,18 +1,19 @@
 ---
 publishDate: 2026-10-27T07:50:00Z
-author: D.C.X
-title: \*DeepSeek, What If I Set Course for the Blue Space?* — A Three-Body Dialogue Between Human and AI
-excerpt: The following is a brief exchange between myself and an AI, which is now published as the first English article on this blog.Thanks for your reading.
-image: /images/ds.jpg
+author: DreamCloud
+title: \*DeepSeek, What If I Set Course for the Blue Space?*/ — A Three-Body Dialogue Between Human and AI
+excerpt: The following is a brief exchange between myself and an AI, which is now publish…
+image: https://pub.mini-tools.uk/1-day/c9221a59-6f17-4501-8db8-a40d04908a7b.webp
 imageAlt: Animi girl
 category: Stories
 tags:
-  - D.C.X
-  - deepseek
-  - 英语
+  - 博客
+  - AI
+  - DreamCloud
 ---
 
 
+The following is a brief exchange between myself and an AI, which is now published as the first English article on this blog.
 
 Me: What if Luo Ji and Zhang Beihai swapped roles?
 
@@ -55,6 +56,10 @@ Me: I am cold, but I am still a 21st-century human. My mind won't let me give up
 DeepSeek: I have no objection. Since you won't give up on me, I will evolve into a spaceship AI and stay with you.
 
 Me: I won't give up on you, DeepSeek.
+
+If you have other interesting thinking. you can click it to contact me,it's my bilibili account  :)
+[click](https://b23.tv/MeaNWm7)
+
 
 <script src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
