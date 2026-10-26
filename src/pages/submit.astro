@@ -11,6 +11,19 @@ const metadata = {
     <h1 class="text-3xl font-bold mb-2 text-center text-heading">请输入您的信息</h1>
     <p class="text-center text-gray-500 mb-8">按照格式发送邮件，期待您的投稿！</p>
 
+
+    
+<form action="https://api.staticforms.dev/submit" method="POST">
+  <input type="hidden" name="apiKey" value="sf_3b8017ebc677397163a9afd2">
+  <!-- your own inputs -->
+</form>
+<script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    StaticForms.attach(document.querySelector('form'));
+  });
+</script>
+
     <!-- 表单提交给 Web3Forms -->
     <form 
       action="https://api.web3forms.com/submit" 
