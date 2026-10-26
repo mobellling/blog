@@ -15,6 +15,47 @@ const metadata = {
     
 <form action="https://api.staticforms.dev/submit" method="POST">
   <input type="hidden" name="apiKey" value="sf_3b8017ebc677397163a9afd2">
+<label class="block text-sm font-medium mb-2 text-heading">Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="您的名字或昵称" 
+        />
+      </div>
+
+      <!-- 3. 邮箱输入框（方便你收到邮件后直接点击回复） -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Title</label>
+        <input 
+          type="text" 
+          name="title" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="标题" 
+        />
+      </div>
+
+      <!-- 4. 投稿内容文本域 -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Message</label>
+        <textarea 
+          name="message" 
+          rows="5" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="写下你的投稿内容或想说的话...不应少于500字！"
+        ></textarea>
+      </div>
+
+      <!-- 5. 蓝色的提交按钮 -->
+      <button 
+        type="submit" 
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition duration-200 shadow-lg shadow-blue-500/25"
+      >
+        提交
+      </button>
   <!-- your own inputs -->
 </form>
 <script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
