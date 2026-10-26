@@ -18,6 +18,8 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
 >
   <input type="hidden" name="apiKey" value="sf_3b8017ebc677397163a9afd2">
 <div>
+
+  <!-- your own inputs -->
 <label class="block text-sm font-medium mb-2 text-heading">Name</label>
         <input 
           type="text" 
@@ -59,7 +61,9 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
       >
         提交
       </button>
-  <!-- your own inputs -->
+      <p class="text-center text-xs text-gray-400">审核后发布！请勿重复提交！！</p>
+      <p class="text-center text-xs text-gray-400">看到successful即为提交成功！请勿重复提交！！</p>
+
 </form>
 <script src="https://www.staticforms.dev/scripts/staticforms.js" defer></script>
 <script>
@@ -67,11 +71,6 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
     StaticForms.attach(document.querySelector('form'));
   });
 </script>
-
     
-      
-      <p class="text-center text-xs text-gray-400">审核后发布！请勿重复提交！！</p>
-      <p class="text-center text-xs text-gray-400">看到successful即为提交成功！请勿重复提交！！</p>
-    </form>
   </section>
 </Layout>
