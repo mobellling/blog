@@ -13,11 +13,14 @@ const metadata = {
 
 
     
-<form action="https://api.staticforms.dev/submit" method="POST"  
+<form id="contribForm"
+action="https://api.staticforms.dev/submit" method="POST"  
 class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border border-slate-100 dark:border-slate-800"
+
 >
   <input type="hidden" name="apiKey" value="sf_3b8017ebc677397163a9afd2">
 <div>
+
 
   <!-- your own inputs -->
 <label class="block text-sm font-medium mb-2 text-heading">Name</label>
@@ -42,6 +45,19 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
         />
       </div>
 
+
+       <!-- 5. 标签输入 -->
+      <div>
+        <label class="block text-sm font-medium mb-2 text-heading">Tag</label>
+        <input 
+          type="text" 
+          name="tag" 
+          required 
+          class="w-full px-4 py-2 border rounded-lg dark:bg-slate-800 dark:border-slate-700" 
+          placeholder="标签（示例：- 技术 - 博客）" 
+        />
+      </div>
+
       <!-- 4. 投稿内容文本域 -->
       <div>
         <label class="block text-sm font-medium mb-2 text-heading">Message</label>
@@ -53,6 +69,30 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
           placeholder="写下你的投稿内容或想说的话...不应少于500字！"
         ></textarea>
       </div>
+        <!-- 图片链接输入栏 -->
+<div class="mb-4">
+  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+    头图链接 (可选)
+  </label>
+  <div class="flex gap-2">
+    <input 
+      type="url" 
+      name="imageUrl" 
+      placeholder="如果想上传图片，请在此粘贴图片直链（URL）"
+      class="w-full px-4 py-2 border rounded-md dark:bg-slate-800 dark:border-slate-700 dark:text-white text-sm"
+    />
+  </div>
+
+
+  <!-- 引导用户的说明文字 -->
+  <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+    提示：您可以先将图片上传至免费图床（如 
+    <a href="https://mini-tools.uk/upload?lang=zh-CN" target="_blank" class="text-blue-600 dark:text-blue-400 underline">mini-tools</a>)
+    
+    然后复制其“图片直链”粘贴到这里。
+  </p>
+</div>
+
 
       <!-- 5. 蓝色的提交按钮 -->
       <button 
@@ -61,6 +101,10 @@ class="space-y-6 bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md border bord
       >
         提交
       </button>
+      <!-- 成功后的提示弹窗（可以默认隐藏） -->
+<div id="successMsg" class="hidden fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+   投稿成功！感谢您的分享，我会尽快审核。
+</div>
       <p class="text-center text-xs text-gray-400">审核后发布！请勿重复提交！！</p>
       <p class="text-center text-xs text-gray-400">看到successful即为提交成功！请勿重复提交！！</p>
 
