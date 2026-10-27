@@ -47,7 +47,7 @@ export const headerData = {
         // },
         {
           text: '友链',
-          href: getPermalink('/homes/friends'),
+          href: getPermalink('/other/friends'),
         },
         // {
         //   text: 'Personal',
