@@ -5,7 +5,7 @@ title: 网站建成的第一天
 excerpt: 花费了一点时间建成了这个网站，本意是记录一下我在虚拟代码世界的心路历程，但是建立网站也太难了，从头学习前端开发，太复杂了。前前后后两天的时间，也就弄成这个样了，凑活着用吧……
 image: https://images.unsplash.com/photo-1502101872923-d48509bff386?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 imageAlt: Two toddlers standing at the bottom of a beige concrete staircase
-category: Tutorials
+category: Host
 tags:
   - astro
   - web
