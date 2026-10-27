@@ -130,6 +130,7 @@ export const footerData = {
         { text: '哔哩哔哩', href: 'https://www.bilibili.com' },
         { text: 'Majone-soul', href: getPermalink('https://www.maj-soul.com') },
         { text: 'Github', href: getPermalink('https://github.com') },
+        { text: 'Calculus Made Easy', href: getPermalink('https://master-g.github.io/calculus-made-easy-zh/') },
       ],
     },
     // {
