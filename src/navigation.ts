@@ -126,6 +126,7 @@ export const footerData = {
   links: [
     {
       title: '友情链接',
+      target: '_blank',
       links: [
         { text: '哔哩哔哩', href: 'https://www.bilibili.com' },
         { text: 'Majone-soul', href: getPermalink('https://www.maj-soul.com') },
@@ -145,6 +146,7 @@ export const footerData = {
     // },
     {
       title: '资源',
+      target: '_blank',
       links: [
         { text: 'Astro相关文档', href: 'https://docs.astro.build/en/getting-started/' },
         { text: '源文件', href: 'https://github.com/mobellling/blog' },
@@ -154,9 +156,10 @@ export const footerData = {
     },
     {
       title: '特别鸣谢',
+      target: '_blank',
       links: [
         { text: 'neonmz', href: 'https://neonmz.github.io/',
-          target: '_blank',
+          
         },
        
         // { text: 'Report an issue', href: 'https://github.com/arthelokyo/astrowind/issues' },
