@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: '提交成功',
+  description: '您的投稿已成功送达',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="flex items-center justify-center min-h-[70vh] px-6 py-12">
+    <!-- 延续友链卡片的毛玻璃、大圆角与精致边框风格 -->
+    <div class="max-w-md w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-gray-100 dark:border-slate-700/80 shadow-sm rounded-3xl p-8 text-center transition-all">
+      
+      <!-- 成功对勾图标 -->
+      <div class="mx-auto flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full mb-6 shadow-inner">
+        <Icon name="tabler:check" class="w-8 h-8" />
+      </div>
+
+      <!-- 标题 -->
+      <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        投稿提交成功！
+      </h1>
+
+      <!-- 描述文字 -->
+      <p class="text-gray-600 dark:text-gray-300 text-sm mb-8 leading-relaxed">
+        非常感谢您的精彩分享！我们已经收到了您的投稿内容。管理员会在完成审核后尽快将其发布到博客上。
+      </p>
+
+      <!-- 按钮操作区 -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-2xl transition-colors shadow-sm"
+        >
+          <Icon name="tabler:home" class="w-4 h-4 mr-2" />
+          返回首页
+        </a>
+        
+        <a 
+          href="/contribute" 
+          class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-2xl transition-colors"
+        >
+          <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />
+          继续投稿
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
