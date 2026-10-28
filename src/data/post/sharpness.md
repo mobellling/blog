@@ -3,7 +3,7 @@ publishDate: 2026-10-27T16:40:00Z
 author: 潭水之西
 title: 一个叫Sharpness的男人决定抛尸
 excerpt: Sharpness保证他不是有意杀掉Judelow的。平心而论，Jude是个不错的室友。虽然他脾气奇差，品位清奇，嘴臭又记仇，尤其喜欢给他布置各种各样没木的圈套——但有一说一，Jude并不是让他完全无法忍受的存在。
-image: https://pub.mini-tools.uk/1-day/337e9a56-f97a-4bd9-9302-078291de5f7d.jpg
+image: https://mobellling.github.io/-image-/shaperness.png
 imageAlt: Animi girl
 category: Other
 tags:

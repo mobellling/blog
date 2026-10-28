@@ -3,7 +3,7 @@ publishDate: 2026-10-27T07:50:00Z
 author: DreamCloud
 title: \*DeepSeek, What If I Set Course for the Blue Space?*/ — A Three-Body Dialogue Between Human and AI
 excerpt: The following is a brief exchange between myself and an AI, which is now publish…
-image: https://pub.mini-tools.uk/1-day/c9221a59-6f17-4501-8db8-a40d04908a7b.webp
+image: /images/ds.jpg
 imageAlt: Animi girl
 category: Other
 tags:

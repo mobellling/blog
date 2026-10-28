@@ -17,6 +17,10 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -119,6 +123,8 @@ export default defineConfig({
   },
 
   markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
     processor: unified({
       remarkPlugins: [readingTimeRemarkPlugin],
       rehypePlugins: [responsiveTablesRehypePlugin],
@@ -137,4 +143,7 @@ export default defineConfig({
       },
     },
   },
+
+
+  
 });
