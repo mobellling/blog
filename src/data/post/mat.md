@@ -57,7 +57,7 @@ tags:
 ## 二、填空
 
 **1. 设 $a, b \in \mathbb{R}$，$ab > 0$，且极限 $$ \lim_{x \to 0} \frac{\ln(1 + bx) \tan 2x}{(1 - \cos(ax)) \cos x} $$
-存在且不为零，则 $b = \underline{\quad\quad}$，该极限为 $\underline{\quad\quad}$。**
+存在且不为零， $b > 0$，该极限为 $\underline{\quad\quad}$。**
  
 这道题的问法忘记了，好像和这个差不多，但我印象里不是这样问的，不过极限是一样的，通过等价无穷小的代换，可以很轻易得得到 $$ \lim_{x \to 0} \frac{\ln(1 + bx) \tan 2x}{(1 - \cos(ax)) \cos x} = \lim_{x \to 0} \frac{bx 2x}{\frac{1}{2} a^2 x^2 \cos x} $$ 化简得 $$ \lim_{x \to 0} \frac{\ln(1 + bx) \tan 2x}{(1 - \cos(ax)) \cos x}= \frac{4b}{a^2} $$
 
