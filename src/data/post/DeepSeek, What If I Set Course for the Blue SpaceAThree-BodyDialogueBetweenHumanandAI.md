@@ -3,7 +3,7 @@ publishDate: 2026-10-27T07:50:00Z
 author: DreamCloud
 title: \*DeepSeek, What If I Set Course for the Blue Space?*/ — A Three-Body Dialogue Between Human and AI
 excerpt: The following is a brief exchange between myself and an AI, which is now publish…
-image: /images/ds.jpg
+image: /images/ds.webp
 imageAlt: Animi girl
 category: Other
 tags:
@@ -61,7 +61,8 @@ If you have other interesting thinking. you can click it to contact me,it's my b
 [click](https://b23.tv/MeaNWm7)
 
 
-<script src="https://giscus.app/client.js"
+<script loading="lazy"
+        src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
         data-repo-id="R_kgDOVU1Z4g"
         data-category="Announcements"

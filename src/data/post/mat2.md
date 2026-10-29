@@ -138,7 +138,8 @@ $g(1) = -g(0)$，
 总算把所有题目写完了，线性代数的题目前并未找到，编者已经向老师申请，等下周拿到原题后再来做分享。最后，祝所有人都能取得满意的成绩！
 
 
-<script src="https://giscus.app/client.js"
+<script loading="lazy"
+        src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
         data-repo-id="R_kgDOVU1Z4g"
         data-category="Announcements"

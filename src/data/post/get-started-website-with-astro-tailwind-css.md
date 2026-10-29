@@ -55,7 +55,8 @@ tags:
 
 我的数字世界，正式开张！
 
-<script src="https://giscus.app/client.js"
+<script loading="lazy"
+        src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
         data-repo-id="R_kgDOVU1Z4g"
         data-category="Announcements"

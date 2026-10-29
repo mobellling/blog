@@ -1,4 +1,3 @@
-
 ---
 publishDate: 2026-10-29T11:10:00Z
 author: 倾忆雨
@@ -44,7 +43,8 @@ tags:
 
 **现在，睁开眼，去爱这个世界吧。**
 
-<script src="https://giscus.app/client.js"
+<script loading="lazy"
+        src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
         data-repo-id="R_kgDOVU1Z4g"
         data-category="Announcements"

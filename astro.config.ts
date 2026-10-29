@@ -34,7 +34,7 @@ export default defineConfig({
   // (works together with <ClientRouter />, which enables prefetch by default).
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'tap',
+    defaultStrategy: 'viewport',
   },
 
   // Native Fonts API: self-hosts + subsets + preloads Inter and generates

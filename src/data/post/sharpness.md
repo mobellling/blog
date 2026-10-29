@@ -41,7 +41,8 @@ Sharpness保证他不是有意杀掉Judelow的。
 
 　　“Fuck……”Sharpness滑坐在地上，仰头望天，终于疲惫地闭上了眼睛。
 
-<script src="https://giscus.app/client.js"
+<script loading="lazy"
+        src="https://giscus.app/client.js"
         data-repo="mobellling/mobellling.github.io"
         data-repo-id="R_kgDOVU1Z4g"
         data-category="Announcements"
