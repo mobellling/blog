@@ -11,7 +11,7 @@ metadata:
   title:
     default: MobellSite
     template: '%s — MobellSite'
-  description: "这是一个博客网站，由 Mobell 创建。"
+  description: "这是一个博客网站，由 晓钟Mobell 创建。"
   robots:
     index: true
     follow: true
@@ -34,7 +34,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 8
+    postsPerPage: 5
 
     post:
       isEnabled: true
