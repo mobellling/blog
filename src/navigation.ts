@@ -152,6 +152,8 @@ export const footerData = {
         { text: '源文件', href: 'https://github.com/mobellling/blog' },
         { text: '联系', href: getPermalink('/contact') },
         { text: 'Blog', href: getBlogPermalink() },
+        { text: '图片转webp', href: 'https://wefreestar.com/zh/toolbox/image-to-webp' },
+        { text: '文本加空行', href: 'https://uutool.cn/list-new-line' },
       ],
     },
     {
