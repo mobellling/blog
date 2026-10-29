@@ -3,7 +3,7 @@ publishDate: 2026-10-28T20:20:00Z
 author: Mobell
 title: 2026级高等数学(上)期中考试试题讲解 Ⅰ
 excerpt: 高数和线代是入学以来上课次数最多的两门课，也是大多数大学生投入精力最多的课程之一。即使满打满算我也就才学习了两个月的时间，但是这两门课的难度已经有所上升，令人十分无奈。这篇文章，我就高数的试题，进行一个讲解，同时巩固我对知识的理解程度。
-image: https://mobellling.github.io/-image-/maths.jpg
+image: https://mobellling.github.io/-image-/maths.webp
 imageAlt: ss
 category: Host
 tags:
