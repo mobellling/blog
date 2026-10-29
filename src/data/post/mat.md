@@ -92,11 +92,7 @@ $$
 
 **5. 设 $f(x) = (x - 3)^n \sin \frac{\pi x}{6}$，则 $f^{(n)}(3) = \underline{\quad\quad}$。**
 
-由莱布尼茨公式 $(uv)^{(m)} = \sum_{k=0}^{m} C_m^k u^{(m-k)} v^{(k)}$
-
-$$
-f^{(n)}(x) = C_n^0 (x-3)^n \left(\sin\frac{\pi x}{6}\right)^{(n)} + C_n^1 n(x-3)^{n-1} \left(\sin\frac{\pi x}{6}\right)^{(n-1)} + \dots + C_n^n n! \sin\frac{\pi x}{6}
-$$
+由莱布尼茨公式 $(uv)^{(m)} = \sum_{k=0}^{m} C_m^k u^{(m-k)} v^{(k)}$ $$f^{(n)}(x) = C_n^0 (x-3)^n \left(\sin\frac{\pi x}{6}\right)^{(n)} + C_n^1 n(x-3)^{n-1} \left(\sin\frac{\pi x}{6}\right)^{(n-1)} + \dots + C_n^n n! \sin\frac{\pi x}{6} $$
 
 $$
 f^{(n)}(3) = 0 + 0 + \dots + n! \sin\frac{\pi}{2} = n!
