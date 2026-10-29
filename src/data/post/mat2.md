@@ -3,7 +3,7 @@ publishDate: 2026-10-29T22:00:00Z
 author: Mobell
 title: 2026级高等数学(上)期中考试试题讲解 Ⅱ
 excerpt: 第二部分我们来到了大题部分，我个人感觉大题是要比选择稍难一些，但是也没有到很难的地步。
-image: https://mobellling.github.io/-image-/maths.webp
+image: https://pub.mini-tools.uk/permanent/81ddf9d3-7d8f-4541-86b5-343e375c83d8.webp
 imageAlt: ss
 category: Host
 tags:
@@ -16,7 +16,7 @@ tags:
 
 同样网络上的回忆版于正式版有些许偏差，但是数值和算是都是相同的，只是问法稍有不同，不影响我们分析。
 <div text-center>
-    <img loading="lazy" src = 'https://mobellling.github.io/-image-/maths/t2.png'>
+    <img src="https://pub.mini-tools.uk/permanent/3bdb9016-7861-43e9-8a28-0b1eb0c43594.png" alt="t2">
 </div>
 
 ## 三、计算题

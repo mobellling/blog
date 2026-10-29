@@ -3,7 +3,7 @@ publishDate: 2026-10-29T11:10:00Z
 author: 倾忆雨
 title: Arrogance
 excerpt: 期待是什么呢?是长辈殷切的目光，灵犀相通的偶遇驱散暑气的晚风；又是午后聒噪冗长的蝉鸣和卧室中褶皱的床单，掌中紧紧握住的手机与心底萦怀难敛的情思；是那些我们一遍遍临摹的、崭新的、盈溢着希望的未来。
-image: https://mobellling.github.io/-image-/arr.webp
+image: https://pub.mini-tools.uk/permanent/eeb49acf-16c5-46a0-8b87-438f10cd6a42.webp
 imageAlt: headpicture
 category: Other
 tags:
