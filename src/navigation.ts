@@ -154,6 +154,7 @@ export const footerData = {
         { text: 'Blog', href: getBlogPermalink() },
         { text: '图片转webp', href: 'https://wefreestar.com/zh/toolbox/image-to-webp' },
         { text: '文本加空行', href: 'https://uutool.cn/list-new-line' },
+        { text: 'DeepSeek API文档', herf:'https://api-docs.deepseek.com/zh-cn/' },
       ],
     },
     {
